@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>PWA化テスト</title>
+
+<!-- manifest.jsonの読み込み -->
+<link rel="manifest" href="manifest.json">
+
+<style>
+html, body{
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+}
+</style>
+
+<!-- ★ iOSの場合は次の記述だけでPWA化できる -->
+<!-- アドレスバー等のブラウザのUIを非表示 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- default（Safariと同じ） or black（黒）or black-translucent（ステータスバーをコンテンツに含める） -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!-- ホーム画面に表示されるアプリ名 -->
+<meta name="apple-mobile-web-app-title" content="よこじアプリ">
+<!-- ホーム画面に表示されるアプリアイコン -->
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+
+</head>
+
+<body>
+  <div>
+    PWA化テスト インストール機能まで完成
+    <button onclick="install()">
+      Install
+    </button>
+  </div>
+  
+  <!-- Service Worker の登録 -->
+  <script src="./register_service_worker.js"></script>
+
+  <!-- インストールのリクエスト -->
+  <script src="./request_install.js"></script>
+
+</body>
+</html>
